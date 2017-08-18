@@ -5,11 +5,23 @@
 }
 
 #surface {
-  background: blue;
+  background: white;
+  border-radius: 25px;
   width: 726px;
   height: 534px;
   position: relative;
   bottom: 697px;
   left: 135px;
-  border-radius: 28px;
+  line-height: 0;
+}
+
+.pix {
+  position: relative;
+  background: green;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-radius: relative;
+  margin: 0;
+  border: 0;
 }
