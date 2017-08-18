@@ -1,0 +1,15 @@
+#wrapper {
+  width: 1000px;
+  height: 825px;
+  margin: 25px auto;
+}
+
+#surface {
+  background: blue;
+  width: 726px;
+  height: 534px;
+  position: relative;
+  bottom: 697px;
+  left: 135px;
+  border-radius: 28px;
+}
