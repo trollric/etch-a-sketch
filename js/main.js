@@ -22,3 +22,8 @@ $(document).ready(function(){
   $(".pix").css("width", pix_width);
   $(".pix").css("height" ,pix_height);
 });
+
+$("#surface>div").hover(function(){
+  console.log("mouseover?");
+  $(this).css("background-color", "black");
+});
