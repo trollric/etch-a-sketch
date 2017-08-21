@@ -15,15 +15,20 @@ $(document).ready(function(){
   // inside of the screen div.
 
   for(x=0;x < Math.pow(matrix_dimension,2);x++){
-    var $pixel = $("<div class='pix'></div>");
+    var $pixel = $("<div id=pix"+x+"></div>");
     $("#surface").append($pixel);
+    $("#pix"+x).css("width", pix_width);
+    $("#pix"+x).css("height" ,pix_height);
   }
 
-  $(".pix").css("width", pix_width);
-  $(".pix").css("height" ,pix_height);
+
 });
 
 $("#surface>div").hover(function(){
-  console.log("mouseover?");
-  $(this).css("background-color", "black");
+  $(this).css("background", "black");
 });
+
+//Instead of class use ID
+// move .css width and height inside of the loop
+// then maybe hover works.
+// "<div id=pix"+x+"></div">

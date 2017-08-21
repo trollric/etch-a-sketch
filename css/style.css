@@ -15,7 +15,7 @@
   line-height: 0;
 }
 
-.pix {
+#surface div{
   position: relative;
   background: green;
   display: inline-block;
