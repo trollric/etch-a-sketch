@@ -2,6 +2,7 @@
   width: 1000px;
   height: 825px;
   margin: 25px auto;
+  background: none;
 }
 
 #surface {
@@ -24,4 +25,15 @@
   border-radius: relative;
   margin: 0;
   border: 0;
+}
+
+.button{
+  background-color: #F0F0F0;
+  color: #666;
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 5%;
+  text-decoration: none;
+  top: 250px;
+  left: 20px;
 }
