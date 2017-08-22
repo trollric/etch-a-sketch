@@ -1,6 +1,7 @@
 $(document).ready(function(){
   // Default etchasketch dim
   matrix_dimension = 16;
+  last_size = 16;
 
   // Get #surface dimensions
   screen_width = $("#surface").width();
@@ -24,7 +25,7 @@ function createMatrix(size){
   var pix_height = /*Math.floor*/(screen_height / size);
 
   // Fill the #surface id with pixels
-  for(x=0;x < Math.pow(matrix_dimension,2);x++){
+  for(x=0;x < Math.pow(size,2);x++){
     var $pixel = $("<div id=pix"+x+"></div>");
     $("#surface").append($pixel);
     $("#pix"+x).css("width", pix_width);
@@ -32,6 +33,29 @@ function createMatrix(size){
   }
 }
 
-function destroyMatrix(){
+// Destroys the matrix by removing all the elements
+function destroyMatrix(size){
+  for(x=0;x < Math.pow(size,2);x++){
+    $("#pix"+x).remove();
+  }
+}
 
+// Resets the pixels
+function reset(){
+  var dim = prompt("How many pixels would you like per side? (1-100)");
+  if(dim !=null){
+    if(dim<1){dim=1;}
+    else if(dim>100){dim=100;}
+    else if(isNaN(dim)){
+      alert("not a numbera, creating a default 16x16 matrix");
+      dim = 16;
+    }
+  }
+  else{
+    alert("You gave no input creating a 16x16 array per default");
+    dim = 16;
+  }
+  destroyMatrix(last_size);
+  last_size = dim;
+  createMatrix(dim);
 }
