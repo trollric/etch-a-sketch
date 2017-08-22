@@ -4,8 +4,8 @@ $(document).ready(function(){
   last_size = 16;
 
   // Get #surface dimensions
-  screen_width = $("#surface").width();
-  screen_height = $("#surface").height();
+  screen_width = $("#surface").innerWidth();
+  screen_height = $("#surface").innerHeight();
 
   createMatrix(matrix_dimension);
 });
@@ -47,12 +47,12 @@ function reset(){
     if(dim<1){dim=1;}
     else if(dim>100){dim=100;}
     else if(isNaN(dim)){
-      alert("not a numbera, creating a default 16x16 matrix");
+      alert("not a number, creating a default 16x16 matrix for you.");
       dim = 16;
     }
   }
   else{
-    alert("You gave no input creating a 16x16 array per default");
+    alert("You gave no input creating a 16x16 array per default.");
     dim = 16;
   }
   destroyMatrix(last_size);
